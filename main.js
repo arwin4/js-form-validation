@@ -4,7 +4,7 @@ const emailError = document.querySelector('#email + span.error');
 const formError = document.querySelector('form + span.error');
 
 function showError() {
-  if (email.validity.typeMismatch || email.value.length < 1) {
+  if (email.validity.typeMismatch || email.validity.valueMissing) {
     emailError.textContent = 'Please enter a valid email address';
   }
 }
